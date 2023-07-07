@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('resepfree');
+// })->name('home');
+
+Route::get('/', [ResepController::class, 'index'])->name('allresep');
+// route::view('/dashboard', 'dashboard')->name('dashboard');
+
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    route::get('/resepsaya', [ResepController::class, 'resepsaya'])->name('resepsaya');
+    Route::get('/addresep', [ResepController::class, 'vaddresep'])->name('addresep');
+    Route::post('/storeresep', [ResepController::class, 'storeresep'])->name('storeresep');
+    Route::get('/detail/{id}', [ResepController::class, 'detailresep'])->name('detailresep');
 });
+
+require __DIR__ . '/auth.php';
