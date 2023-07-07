@@ -12,7 +12,7 @@
             
             <div class="row ">
                 @foreach ($resep as $item)
-                <div class="col-4 mb-4">
+                <div class="col-md-4 col-sm-12 mb-4">
                     <div class="card h-100">
                         <img src="../image/{{ $item->photo }}" class="card-img-top" width="100%" height="50%">
                         <div class="card-body">
