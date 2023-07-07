@@ -17,7 +17,7 @@
             <form action="{{ route('storeresep') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                  <label for="exampleInputEmail1">judul</label>
+                  <label for="exampleInputEmail1">Judul</label>
                   <input type="text" class="form-control" name="judul" id="exampleInputEmail1">
                 </div>
                 <div class="form-group">

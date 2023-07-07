@@ -61,7 +61,7 @@ class ResepController extends Controller
         $resep->photo = $filename;
         $resep->save();
 
-        return redirect()->route('dashboard')
+        return redirect()->route('resepsaya')
             ->with('success', 'Product created successfully.');
     }
 

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
 
-        <h4>Resep Pribadi</h4>
+        <h4 class="mb-4">Resep Pribadi</h4>
 
         <div class="container">
             <div class="row ">
